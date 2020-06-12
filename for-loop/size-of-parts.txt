@@ -1,0 +1,23 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        // put your code here
+        Scanner scan = new Scanner(System.in);
+        int totalNoParts = scan.nextInt();
+        int detector;
+        int fixed = 0;
+        int rejected = 0;
+        int perfect = 0;
+        for (int i = 0; i < totalNoParts; i++) {
+            detector = scan.nextInt();
+            if (detector == 1) {
+                fixed++;
+            } else if (detector == -1) {
+                rejected++;
+            } else {
+                perfect++;
+            }
+        }
+        System.out.println(perfect + " " + fixed + " " + rejected);
+    }
+}
